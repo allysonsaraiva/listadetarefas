@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Header from './components/Header'
 import AddTask from './components/AddTask'
@@ -22,6 +23,16 @@ const App = () => {
       id: '3',
       title: 'Fazer o site',
       completed: true,
+    },
+    {
+      id: '4',
+      title: 'Ler Livros',
+      completed: false,
+    },
+    {
+      id: '5',
+      title: 'Fazer o site',
+      completed: false,
     },
   ])
 
@@ -55,17 +66,27 @@ const App = () => {
   }
 
   return (
-    <>
+    <BrowserRouter>
       <div className="container">
         <Header />
-        <AddTask handleTaskAddition={handleTaskAddition} />
-        <TasksList
-          tasksList={tasks}
-          handleTaskClick={handleTaskClick}
-          handleTaskDeletion={handleTaskDeletion}
-        />
+        <Routes>
+          <Route
+            path="/"
+            exact
+            element={
+              <>
+                <AddTask handleTaskAddition={handleTaskAddition} />
+                <TasksList
+                  tasksList={tasks}
+                  handleTaskClick={handleTaskClick}
+                  handleTaskDeletion={handleTaskDeletion}
+                />
+              </>
+            }
+          ></Route>
+        </Routes>
       </div>
-    </>
+    </BrowserRouter>
   )
 }
 
