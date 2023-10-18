@@ -1,0 +1,18 @@
+.botton {
+  background-color: darkviolet;
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  color: #eee;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.botton:hover {
+  background-color: chartreuse;
+  color: #444;
+}
