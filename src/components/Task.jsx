@@ -30,7 +30,7 @@ const Task = ({ task, handleTaskClick, handleTaskDeletion }) => {
         {task.title}
       </div>
 
-      <div className="button-container">
+      <div className="buttons-container">
         <button className="task-button" onClick={handleTaskDetailsClick}>
           <CgInfo />
         </button>
