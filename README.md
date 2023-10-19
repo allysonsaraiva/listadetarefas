@@ -1,4 +1,4 @@
-# Lista de Tarefa em React consumindo uma API com [Axios](https://axios-http.com/ptbr/docs/intro)
+# Lista de Tarefa em React consumindo uma API com Axios
 ![image](https://github.com/allysonsaraiva/listadetarefas/assets/31968475/8852f96b-6a92-4182-803a-aefcfd0f64a4)
 
 
